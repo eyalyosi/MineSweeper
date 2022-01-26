@@ -1,7 +1,5 @@
 'use strict'
 
-console.log('hi');
-
 const BOMB = 'BOMB';
 const FLAG = 'FLAG';
 
@@ -47,12 +45,8 @@ function buildBoard() {
             board[i][j] = cell
         }
     }
-    placeRandomMine()
-    // Place 2 bombs
-    board[0][0].isMine = true;
-    board[0][1].isMine = true;
-    // console.log(board)
-
+    placeRandomMine(board)
+    placeRandomMine(board)
 
     return board;
 }
@@ -122,11 +116,11 @@ function expandShown(board, elCell, i, j) {
     // When user clicks a cell with no mines around, we need to open not only that cell, but also its neighbors.
 }
 
-function placeRandomMine() {
-    var pos = getRandomLocMine()
+function placeRandomMine(board) {
+    var pos = getRandomLocMine(board)
     if (!pos) return
-
-    gBoard[pos.i][pos.j].isMine = true
+    board[pos.i][pos.j].isMine = true;
+    return pos
 }
 
 function renderCell(location, value) {
@@ -155,19 +149,20 @@ function getClassId(location) {
 }
 
 
-function getRandomLocMine() {
+function getRandomLocMine(board) {
+    
     var randomsLoc = []
-    for (var i = 0; i < gBoard.length; i++) {
-        for (var j = 0; j < gBoard[0].length; j++) {
-            var cell = gBoard[i][j]
+    for (var i = 0; i < board.length; i++) {
+        for (var j = 0; j < board[0].length; j++) {
+            var cell = board[i][j]
             if (!cell.isMine)
-                var MineCell = {
-                    minesAroundCount: null,
-                    isShown: false,
-                    isMine: true,
-                    isMarked: false
-                }
-            randomsLoc.push(MineCell)
+                // var MineCell = {
+                //     minesAroundCount: null,
+                //     isShown: false,
+                //     isMine: true,
+                //     isMarked: false
+                // }
+            randomsLoc.push({ i: i, j: j })
         }
     }
     if (randomsLoc.length) return randomsLoc[getRandomIntInclusive(0, randomsLoc.length - 1)];
