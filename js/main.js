@@ -120,7 +120,6 @@ function placeRandomMine(board) {
     var pos = getRandomLocMine(board)
     if (!pos) return
     board[pos.i][pos.j].isMine = true;
-    return pos
 }
 
 function renderCell(location, value) {
