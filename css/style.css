@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+}
+
+
+table {
+    
+    margin: auto;
+    border-spacing: 0px;
+}
+
+td {
+     width: 40px;
+    height: 40px;
+    text-align: center;
+    background-color: grey;
+    border-top: 3px solid rgb(248, 245, 245);
+    border-right: 3px solid grey;
+    border-bottom: 3px solid grey;
+    border-left: 3px solid rgb(248, 245, 245);
+    /* color: white; */
+    font-size: 30px;
+    color: transparent;
+}
+
+img {
+    width: 100%;
+}
+
