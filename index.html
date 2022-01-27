@@ -8,13 +8,26 @@
     <link rel="stylesheet" href="css/style.css">
 
 </head>
-<body onkeyup="handleKey(event)" onload="init()">
+<body onload="init()">
+    
     <h1>Minesweeper</h1>
 
+<div class="game-level"> 
+    <button onclick="startGame(16)">4X4</button>
+    <button onclick="startGame(64)">8X8</button>
+    <button onclick="startGame(256)">16X16</button>
+</div>
+
+<h2>Timer:</h2>
+<div class="timer">0</div>
 
     <table>
-        <tbody class="board"></tbody>
-    </table>
+    <tbody class="board"></tbody>
+</table>
+
+
+ 
+
 
 
     <script src="js/util.js"></script>

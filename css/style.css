@@ -1,29 +1,43 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  text-align: center;
 }
 
-
 table {
-    
-    margin: auto;
-    border-spacing: 0px;
+  margin: auto;
+  border-spacing: 0px;
 }
 
 td {
-     width: 40px;
-    height: 40px;
-    text-align: center;
-    background-color: grey;
-    border-top: 3px solid rgb(248, 245, 245);
-    border-right: 3px solid grey;
-    border-bottom: 3px solid grey;
-    border-left: 3px solid rgb(248, 245, 245);
-    /* color: white; */
-    font-size: 30px;
-    color: transparent;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  background-color: grey;
+  border-top: 3px solid rgb(248, 245, 245);
+  border-right: 3px solid rgb(184, 181, 181);
+  border-bottom: 3px solid rgb(184, 181, 181);
+  border-left: 3px solid rgb(248, 245, 245);
+  /* color: white; */
+  font-size: 30px;
+  color: transparent;
 }
 
 img {
-    width: 100%;
+  width: 100%;
 }
 
+.bomb {
+  display: none;
+}
+
+.timer {
+  width: 80px;
+  height: 30px;
+  background-color: grey;
+  color: white;
+  font-size: 28px;
+  margin: auto;
+  margin: 0px auto 20px;
+}
